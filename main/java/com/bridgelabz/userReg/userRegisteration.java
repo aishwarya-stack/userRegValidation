@@ -12,8 +12,15 @@ public class userRegisteration {
 		System.out.println(Pattern.matches("[A-Z][a-z]{2,}", firstName));
 	}
 
+	public void validLastName() {
+		System.out.println("Enter your last Name : ");
+		String lastName = sc.nextLine();
+		System.out.println(Pattern.matches("[A-Z][a-z]{2,}", lastName));
+	}
+
 	public static void main(String[] args) {
 		userRegisteration object = new userRegisteration();
 		object.validFirstName();
+		object.validLastName();
 	}
 }
