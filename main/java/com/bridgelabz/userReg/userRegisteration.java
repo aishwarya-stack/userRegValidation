@@ -30,6 +30,11 @@ public class userRegisteration {
 		System.out.println(Pattern.matches("(91\\s)?[789][0-9]{9}$", mobileNumber));
 
 	}
+	public static void validPassword() {
+		System.out.println("Enter your Password : ");
+		String password = sc.nextLine();
+		System.out.println(Pattern.matches("[a-zA-Z]{8,}", password));
+	}
 
 	public static void main(String[] args) {
 		userRegisteration object = new userRegisteration();
@@ -37,5 +42,6 @@ public class userRegisteration {
 		object.validLastName();
 		object.validEmailId();
 		userRegisteration.validMobileNumber();
+		userRegisteration.validPassword();
 	}
 }
