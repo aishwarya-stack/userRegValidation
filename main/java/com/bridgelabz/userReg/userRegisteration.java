@@ -33,9 +33,9 @@ public class userRegisteration {
 	public static void validPassword() {
 		System.out.println("Enter your Password : ");
 		String password = sc.nextLine();
-		System.out.println(Pattern.matches("^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$", password));
+		System.out
+				.println(Pattern.matches("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$", password));
 	}
-
 	public static void main(String[] args) {
 		userRegisteration object = new userRegisteration();
 		object.validFirstName();
