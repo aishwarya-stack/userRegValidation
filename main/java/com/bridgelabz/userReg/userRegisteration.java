@@ -24,11 +24,18 @@ public class userRegisteration {
 				Pattern.matches("\"^([a][b][c])([\\\\.][a-z]+)[@][b][l][\\\\.][c][o]([\\\\.][i][n])\"", email));
 
 	}
+	public static void validMobileNumber() {
+		System.out.println("Enter your Mobile Number : ");
+		String mobileNumber = sc.nextLine();
+		System.out.println(Pattern.matches("(91\\s)?[789][0-9]{9}$", mobileNumber));
+
+	}
 
 	public static void main(String[] args) {
 		userRegisteration object = new userRegisteration();
 		object.validFirstName();
 		object.validLastName();
 		object.validEmailId();
+		userRegisteration.validMobileNumber();
 	}
 }
